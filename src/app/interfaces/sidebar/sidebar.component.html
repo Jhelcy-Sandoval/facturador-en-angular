@@ -1,0 +1,26 @@
+<section class="min-vh-100 bg-secondary container-fluid pt-2">
+  <div class="row gy-2">
+    <div>
+      <div class="bg-white rounded">
+        <h1 class="text-center">CEL<span class="celya">YA</span></h1>
+      </div>
+    </div>
+    <div class="">
+      <nav>
+        @for (item of sideBar; track item) {
+          <a
+          [routerLink]="item.path"
+          routerLinkActive="bg-dark rounded"
+          class="p-2 d-inline-flex w-100 link-underline link-underline-opacity-0"
+          >
+          <div class="flex flex-col" >
+              <span class="text-lg font-bold leading-5 text-white text-center">
+                {{item.title}}
+              </span>
+          </div>
+          </a>
+      }
+      </nav>
+    </div>
+  </div>
+</section>
